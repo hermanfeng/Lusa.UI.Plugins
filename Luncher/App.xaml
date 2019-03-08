@@ -1,0 +1,14 @@
+﻿<Application x:Class="AppStartUp.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Application.Resources>
+        <SolidColorBrush x:Key="LightGrayBrush" Color="#FFEFEFF2" />
+        <SolidColorBrush x:Key="LightGrayBackgroundBrush" Color="#FFFFFFFF" />
+        <SolidColorBrush x:Key="DarkGrayBrush" Color="#FF424242" />
+        <SolidColorBrush x:Key="ContentForegroundBrush" Color="#FF020202" />
+        <SolidColorBrush x:Key="GreenBrush" Color="#FF388B41" />
+        <SolidColorBrush x:Key="DisableBrush" Color="#4C434647" />
+        <SolidColorBrush x:Key="LabelBrush" Color="#767676" />
+        <SolidColorBrush x:Key="ToolbarForegroundBrush" Color="#FF434647" />
+    </Application.Resources>
+</Application>

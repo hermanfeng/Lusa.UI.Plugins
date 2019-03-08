@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Bundle xmlns="urn:uiosp-bundle-manifest-2.0" Name="UIShell.WpfAppCenterPlugin" SymbolicName="UIShell.WpfAppCenterPlugin" Version="1.0.0.0" InitializedState="Active">
+  <Activator Type="UIShell.WpfAppCenterPlugin.BundleActivator" Policy="Immediate" />
+  <Runtime>
+  </Runtime>
+  <Extension Point="WorkBench.PaneViewPoint">
+    <instance class="PluginCenter.PluginCenterPanViewProvider" />
+  </Extension>
+</Bundle>

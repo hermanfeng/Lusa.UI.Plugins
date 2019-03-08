@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{25BD0C5E-EC8D-4FF1-AD8A-BD7668CEE66D}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>Library</OutputType>
+    <AssemblyName>PluginCenter</AssemblyName>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+    <OutputPath>..\Luncher\bin\Debug\Plugins\PaneViews\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>PluginCenter</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib">
+      <HintPath>Lib\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Lusa.UI.Msic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lusa.UI.PaneView.1.0.4\lib\net461\Lusa.UI.Msic.dll</HintPath>
+    </Reference>
+    <Reference Include="Lusa.UI.WorkBenchContract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lusa.UI.PaneView.1.0.4\lib\net461\Lusa.UI.WorkBenchContract.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_64\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll</HintPath>
+    </Reference>
+    <Reference Include="UIShell.BundleManagementService">
+      <HintPath>Lib\UIShell.BundleManagementService.dll</HintPath>
+    </Reference>
+    <Reference Include="UIShell.iOpenWorks.Bootstrapper">
+      <HintPath>Lib\UIShell.iOpenWorks.Bootstrapper.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIShell.iOpenWorks.BundleRepository">
+      <HintPath>Lib\UIShell.iOpenWorks.BundleRepository.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="UIShell.OSGi">
+      <HintPath>Lib\UIShell.OSGi.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PaneViewProvider.cs" />
+    <Compile Include="PaneViewUserControl.xaml.cs">
+      <DependentUpon>PaneViewUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.cs" />
+    <Compile Include="Properties\Settings.cs" />
+    <Compile Include="Windows\AppCenterUserControl.xaml.cs">
+      <DependentUpon>AppcenterUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\BundleActivator.cs" />
+    <Compile Include="Windows\BundleManagementUserControl.xaml.cs">
+      <DependentUpon>BundleManagementUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\InstallBundlesWindow.xaml.cs">
+      <DependentUpon>InstallBundlesWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Windows\PrivateAppCenterUserControl.xaml.cs">
+      <DependentUpon>PrivateAppCenterUserControl.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="PaneViewUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\AppcenterUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\BundleManagementUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\InstallBundlesWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Windows\PrivateAppCenterUserControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="assets\iopenworks.icon.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Manifest.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

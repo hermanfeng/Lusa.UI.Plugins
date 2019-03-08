@@ -1,0 +1,23 @@
+<UserControl x:Class="PluginCenter.PaneViewUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UIShell.WpfAppCenterPlugin"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <TabControl HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <TabItem Header="Local Plugins">
+                <local:AppCenterUserControl></local:AppCenterUserControl>
+            </TabItem>
+            <TabItem Header="Public Plugin Center">
+                <local:BundleManagementUserControl></local:BundleManagementUserControl>
+            </TabItem>
+            <TabItem Header="Private Plugin Repository">
+                <local:PrivateAppCenterUserControl></local:PrivateAppCenterUserControl>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</UserControl>
