@@ -29,7 +29,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <Prefer32Bit>false</Prefer32Bit>
-    <OutputPath>..\Luncher\bin\Debug\Plugins\PaneViews\</OutputPath>
+    <OutputPath>..\Luncher\bin\Debug\Plugins\PaneViews\PluginCenter\</OutputPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
     <Prefer32Bit>false</Prefer32Bit>
@@ -43,9 +43,11 @@
     </Reference>
     <Reference Include="Lusa.UI.Msic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Lusa.UI.PaneView.1.0.4\lib\net461\Lusa.UI.Msic.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="Lusa.UI.WorkBenchContract, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Lusa.UI.PaneView.1.0.4\lib\net461\Lusa.UI.WorkBenchContract.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="PresentationFramework">
       <HintPath>C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll</HintPath>

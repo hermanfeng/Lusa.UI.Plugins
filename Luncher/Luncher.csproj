@@ -136,11 +136,14 @@
     <Content Include="bin\debug\Plugins\Share\bin\InfragisticsWPF4.Themes.IG.v15.2.dll" />
     <Content Include="bin\debug\Plugins\Share\bin\InfragisticsWPF4.Undo.v15.2.dll" />
     <Content Include="bin\debug\Plugins\Share\bin\InfragisticsWPF4.v15.2.dll" />
+    <Resource Include="bin\debug\Plugins\ThirdPart\UIShell.BundleManagementService\persistent.xml" />
+    <Resource Include="bin\debug\Plugins\ThirdPart\UIShell.BundleManagementService\Manifest.xml" />
+    <Content Include="bin\debug\Plugins\ThirdPart\UIShell.BundleManagementService\bin\ICSharpCode.SharpZipLib.dll" />
+    <Content Include="bin\debug\Plugins\ThirdPart\UIShell.BundleManagementService\bin\UIShell.BundleManagementService.dll" />
+    <Content Include="bin\debug\Plugins\ThirdPart\UIShell.BundleManagementService\bin\UIShell.iOpenWorks.BundleRepository.dll" />
     <Content Include="bin\debug\Plugins\WorkBench\bin\Lusa.UI.WorkBench.dll" />
     <Content Include="bin\debug\Plugins\WorkBench\bin\Lusa.UI.WorkBench.pdb" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\debug\Plugins\ThirdPart\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
